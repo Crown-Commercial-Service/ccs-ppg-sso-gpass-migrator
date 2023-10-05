@@ -1,0 +1,127 @@
+
+#COMMON Variables
+#=================
+aws_account_id                     = "12345678"
+aws_region                         = "eu-west-2"
+env                                = "dev"
+cf_api_endpoint                    = "someapi_endpoint"
+cf_cli_docker_image                = "cloudfoundry/cli"
+cf_org                             = "some_org_name"
+cf_space                           = "development"
+cf_username_ssm_param              = "cf_username"
+cf_password_ssm_param              = "cf_password"
+ecs_cluster_arn                    = "ARN_of_the_ecs_cluster"
+ecs_execution_role_arn             = "ARN_of_the_execution_role"
+pass_ecs_execution_role_policy_arn = "arn:aws:iam::aws:policy/AdministratorAccess"
+vpc_id                             = "vpc_id"
+pg_docker_image                    = "postgres:latest"
+resource_name_prefixes = {
+    normal  = "dev"
+    hyphens = "PREFIX-123"
+    hyphens_lower = "prefix-n123"
+  }
+subnets = {
+    "eu-west-2c" = "subnet_id",
+    "eu-west-2a" = "subnet_id",
+    "eu-west-2b" = "subnet_id",
+  }
+
+#NOTES:
+#======
+
+#Cf_service_instance         = Name of the postgres service in the cloudfoundry
+#process_name                = name of the service in ECS
+#db_client_security_group_id = security group id of the RDS instance
+#pg_db_endpoint              = RDS endpoint for the database
+#pg_db_name                  = database name 
+#pg_db_username              = Username of the RDS instance
+#pg_db_password_ssm_param    = Password variables which is updated on the SSM.
+
+#Uncomment the Variable section based the service which you are migrating
+#========================================================================
+
+#ADAPTOR DB variables:
+#====================
+# cf_service_instance                = "dev-adaptor-pg-service"
+
+# process_name                       = "migrate-adaptor"
+# db_clients_security_group_id       = "sg_id"
+# pg_db_endpoint                     = "rds-endpoint.eu-west-2.rds.amazonaws.com:5432"
+# pg_db_name                         = "ppgsso_adaptor"
+# pg_db_username                     = "ppgdevadmin"
+# pg_db_password_ssm_param           = "db_password_adaptor"
+
+#SECURITY DB variables:
+#====================
+# cf_service_instance                = "dev-security-pg-service"
+
+# process_name                       = "migrate-security"
+# db_clients_security_group_id       = "sg_id"
+# pg_db_endpoint                     = "rds-endpoint.eu-west-2.rds.amazonaws.com:5432"
+# pg_db_name                         = "ppgsso_security"
+# pg_db_username                     = "ppgdevadmin"
+# pg_db_password_ssm_param           = "db_password_security"
+
+#CORE DB variables:
+#====================
+# cf_service_instance                = "dev-sso-pg-service"
+
+# process_name                       = "migrate-core"
+# db_clients_security_group_id       = "sg_id"
+# pg_db_endpoint                     = "rds-endpoint.eu-west-2.rds.amazonaws.com:5432"
+# pg_db_name                         = "ppgsso_coredb"
+# pg_db_username                     = "ppgdevadmin"
+# pg_db_password_ssm_param           = "db_password_coredb"
+
+
+#CONTACT DB variables:
+#====================
+# cf_service_instance                = "dev-contact-pg-service"
+
+# process_name                       = "migrate-contact"
+# db_clients_security_group_id       = "sg_id"
+# pg_db_endpoint                     = "rds-endpoint.eu-west-2.rds.amazonaws.com:5432"
+# pg_db_name                         = "ppgsso_contact"
+# pg_db_username                     = "ppgdevadmin"
+# pg_db_password_ssm_param           = "db_password_contact"
+
+#CONFIGURATION DB variables:
+#====================
+# cf_service_instance                = "dev-config-pg-service"
+
+# process_name                       = "migrate-configuration"
+# db_clients_security_group_id       = "sg_id"
+# pg_db_endpoint                     = "rds-endpoint.eu-west-2.rds.amazonaws.com:5432"
+# pg_db_name                         = "ppgsso_configuration"
+# pg_db_username                     = "ppgdevadmin"
+# pg_db_password_ssm_param           = "db_password_configuration"
+
+#ORGANISATION DB variables:
+#====================
+# cf_service_instance                = "dev-organisation-pg-service"
+
+# process_name                       = "migrate-organisation"
+# db_clients_security_group_id       = "sg_id"
+# pg_db_endpoint                     = "rds-endpoint.eu-west-2.rds.amazonaws.com:5432"
+# pg_db_name                         = "ppgsso_organisation"
+# pg_db_username                     = "ppgdevadmin"
+# pg_db_password_ssm_param           = "db_password_organisation"
+
+#USER DB variables:
+#==================
+
+# cf_service_instance                = "dev-user-pg-service"
+
+# process_name                       = "migrate-user"
+# db_clients_security_group_id       = "sg_id"
+# pg_db_endpoint                     = "rds-endpoint.eu-west-2.rds.amazonaws.com:5432"
+# pg_db_name                         = "ppgsso_user"
+# pg_db_username                     = "ppgdevadmin"
+# pg_db_password_ssm_param           = "db_password_user"
+
+
+
+
+
+
+
