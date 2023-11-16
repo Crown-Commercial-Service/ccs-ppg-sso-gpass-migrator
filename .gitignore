@@ -1,8 +1,8 @@
-/Postgres/environment/.terraform
-/Postgres/environment/.terraform.lock.hcl
-/Postgres/environment/terraform.tfstate
-/Postgres/environment/terraform.tfstate*
-/Postgres/environment/terraform.tfvars
+/DB/environment/.terraform
+/DB/environment/.terraform.lock.hcl
+/DB/environment/terraform.tfstate
+/DB/environment/terraform.tfstate*
+/DB/environment/terraform.tfvars
 
 
 
