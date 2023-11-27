@@ -1,10 +1,10 @@
 terraform {
   backend "s3" {
-    bucket         = "ppgpreprod-backend-store"
+    bucket         = "ppgsandbox-backend-store"
     encrypt        = true
     key            = "postgres-migrator/terraform.tfstate"
     region         = "eu-west-2"
-    profile        = "preprod"
+    profile        = "sbx"
     #dynamodb_table = "terraform-state-lock-dynamo"
   }
 }
@@ -12,5 +12,5 @@ terraform {
 provider "aws" {
     region = "eu-west-2"
 
-    profile = "preprod"
+    profile = "sbx"
 }
