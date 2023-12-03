@@ -3,9 +3,9 @@ module "gpaas_s3_migrator" {
 
   lambda_dist_bucket_id                 = aws_s3_bucket.lambda_dist.id
   migration_workers_maximum_concurrency = 2
-  migrator_name                         = "preprod-s3-migrator"
+  migrator_name                         = "sand-s3-migrator"
   resource_name_prefixes = {
-    normal        = "preprod"
+    normal        = "sand"
     hyphens       = "PREFIX-123"
     hyphens_lower = "prefix-n123"
   }
@@ -17,7 +17,3 @@ module "gpaas_s3_migrator" {
 
 }
 
-
-# data "aws_s3_bucket" "existing_bucket" {
-#   bucket = "ppgpreprodbulkupload"
-# }
