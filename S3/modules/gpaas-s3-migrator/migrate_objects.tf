@@ -97,6 +97,7 @@ resource "aws_iam_role_policy" "migrate_batch_of_objects_lambda__write_target_bu
   policy = var.target_bucket_write_objects_policy_document_json
 }
 
+
 resource "aws_iam_role_policy" "migrate_batch_of_objects_lambda__update_objects_to_migrate_item" {
   name   = "update-objects-to-migrate-item"
   role   = module.migrate_batch_of_objects_lambda.service_role_name

@@ -2,7 +2,7 @@ data "aws_iam_policy_document" "read_objects" {
   version = "2012-10-17"
 
   statement {
-    sid = "ListBucket${replace(var.bucket_name, "/[-_]/", "")}"
+    sid = "ListBucketppgsandboxbulkuploadnewbucket"
 
     actions = [
       "s3:ListBucket"
@@ -16,7 +16,7 @@ data "aws_iam_policy_document" "read_objects" {
   }
 
   statement {
-    sid = "GetObject${replace(var.bucket_name, "/[-_]/", "")}"
+    sid = "GetObjectppgsandboxbulkuploadnewbucket"
 
     actions = [
       "s3:GetObject"
@@ -34,7 +34,7 @@ data "aws_iam_policy_document" "write_objects" {
   version = "2012-10-17"
 
   statement {
-    sid = "PutObject${replace(var.bucket_name, "/[-_]/", "")}"
+    sid = "PutObjectppgsandboxbulkuploadnewbucket"
 
     actions = [
       "s3:PutObject"
@@ -52,7 +52,7 @@ data "aws_iam_policy_document" "delete_objects" {
   version = "2012-10-17"
 
   statement {
-    sid = "DeleteObject${replace(var.bucket_name, "/[-_]/", "")}"
+    sid = "DeleteObjectppgsandboxbulkuploadnewbucket"
 
     actions = [
       "s3:DeleteObject"

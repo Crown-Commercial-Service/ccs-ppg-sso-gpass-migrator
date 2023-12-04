@@ -73,6 +73,7 @@ def with_caching_source_s3_client(fn):
             gpaas_service_key = json.loads(
                 gpaas_service_key_ssm_param["Parameter"]["Value"]
             )
+            
             source_s3_client = boto3.client(
                 "s3",
                 aws_access_key_id=gpaas_service_key["aws_access_key_id"],

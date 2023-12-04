@@ -35,7 +35,6 @@ def lambda_handler(event, context):
         Name=gpaas_service_key_ssm_param_name, WithDecryption=True
     )
     gpaas_service_key = json.loads(gpaas_service_key_ssm_param["Parameter"]["Value"])
-
     s3_client = boto3.client(
         "s3",
         aws_access_key_id=gpaas_service_key["aws_access_key_id"],
