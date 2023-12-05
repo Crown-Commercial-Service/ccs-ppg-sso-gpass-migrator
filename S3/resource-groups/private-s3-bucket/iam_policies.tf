@@ -2,7 +2,7 @@ data "aws_iam_policy_document" "read_objects" {
   version = "2012-10-17"
 
   statement {
-    sid = "ListBucketppgsandboxbulkuploadnewbucket"
+    sid = "ListBucketppgproductionbulkupload"
 
     actions = [
       "s3:ListBucket"
@@ -16,7 +16,7 @@ data "aws_iam_policy_document" "read_objects" {
   }
 
   statement {
-    sid = "GetObjectppgsandboxbulkuploadnewbucket"
+    sid = "GetObjectppgproductionbulkupload"
 
     actions = [
       "s3:GetObject"
@@ -34,7 +34,7 @@ data "aws_iam_policy_document" "write_objects" {
   version = "2012-10-17"
 
   statement {
-    sid = "PutObjectppgsandboxbulkuploadnewbucket"
+    sid = "PutObjectppgproductionbulkupload"
 
     actions = [
       "s3:PutObject"
@@ -52,7 +52,7 @@ data "aws_iam_policy_document" "delete_objects" {
   version = "2012-10-17"
 
   statement {
-    sid = "DeleteObjectppgsandboxbulkuploadnewbucket"
+    sid = "DeleteObjectppgproductionbulkupload"
 
     actions = [
       "s3:DeleteObject"

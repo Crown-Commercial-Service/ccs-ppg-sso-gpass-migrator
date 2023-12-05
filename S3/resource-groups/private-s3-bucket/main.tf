@@ -29,5 +29,5 @@
  
 
 data "aws_s3_bucket" "existing_bucket" {
-  bucket = "ppgsandboxbulkuploadnewbucket"   #your bucket name here
+  bucket = "ppgproductionbulkupload"   #your bucket name here
 }
